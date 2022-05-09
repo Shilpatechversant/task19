@@ -5,9 +5,9 @@
             <cfcookie name="visitscounter" value="1">
         </cfif>
         <cfif IsDefined("Cookie.visitscounter") is "True">
-            <cfset s="#cookie.visitscounter#">
-                <cfset up=s+1>
-                    <cfcookie name="visitscounter" value="#up#">
+            <cfset local.s="#cookie.visitscounter#">
+                <cfset local.up=s+1>
+                <cfcookie name="visitscounter" value="#up#">
         </cfif>
         <cflocation url="../index.cfm">
     </cffunction>
